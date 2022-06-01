@@ -104,7 +104,7 @@ public class Panel_4 extends javax.swing.JPanel {
         
         if (archivo != null) {
             try {
-                String Dest = System.getProperty("user.dir") + "/Historias clinicas/" + archivo.getName();
+                String Dest = System.getProperty("user.dir") + "/Historia Clinica/" + archivo.getName();
                 Path Desti = Paths.get(Dest);
                 
                 String Orgi = archivo.getPath();
@@ -115,7 +115,7 @@ public class Panel_4 extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "ENTREGA EXITOSA DE SU DOCUMENTO");
                 JOptionPane.showMessageDialog(null, "DIRECCION:" + "" + Desti);
             } catch (Exception e) {
-               
+                System.err.println("");
             }
         } else {
         }

@@ -270,7 +270,7 @@ public class Panel_1 extends javax.swing.JPanel {
 
         if (!txtNombre.getText().equals("")
                 && !txtNombreEnsayo.getText().equals("")
-                && !txtTipoDeContenido.getText().equals("")) {
+                && !txtTipoDeContenido.getText().equals("")){
 
             //Definir EntityManagerFactory
             EntityManagerFactory emf = new Persistence().createEntityManagerFactory("Examenes_clinicosPU");

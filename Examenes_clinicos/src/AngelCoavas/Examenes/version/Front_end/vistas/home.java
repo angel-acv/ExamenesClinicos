@@ -4,8 +4,15 @@
  */
 package AngelCoavas.Examenes.version.Front_end.vistas;
 
+
+import com.jgoodies.looks.plastic.Plastic3DLookAndFeel;
+import com.jgoodies.looks.plastic.theme.DarkStar;
+import com.jgoodies.looks.plastic.theme.DesertBluer;
+import com.jgoodies.looks.plastic.theme.ExperienceBlue;
+import com.jgoodies.looks.plastic.theme.SkyBlue;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import javax.swing.UIManager;
 
 /**
  *
@@ -39,6 +46,7 @@ public class home extends javax.swing.JFrame {
         MenuSubir = new javax.swing.JLabel();
         MenuRequisitos = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        MenuRequisitos1 = new javax.swing.JLabel();
         content = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -132,8 +140,8 @@ public class home extends javax.swing.JFrame {
         MenuRequisitos.setBackground(new java.awt.Color(74, 74, 207));
         MenuRequisitos.setFont(new java.awt.Font("Consolas", 1, 24)); // NOI18N
         MenuRequisitos.setForeground(new java.awt.Color(255, 255, 255));
-        MenuRequisitos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/listas-de-verificacion.png"))); // NOI18N
-        MenuRequisitos.setText("REQUISITOS");
+        MenuRequisitos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/gmail (1).png"))); // NOI18N
+        MenuRequisitos.setText("RECLAMOS");
         MenuRequisitos.setOpaque(true);
         MenuRequisitos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -149,6 +157,24 @@ public class home extends javax.swing.JFrame {
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/clinica (3).png"))); // NOI18N
 
+        MenuRequisitos1.setBackground(new java.awt.Color(74, 74, 207));
+        MenuRequisitos1.setFont(new java.awt.Font("Consolas", 1, 24)); // NOI18N
+        MenuRequisitos1.setForeground(new java.awt.Color(255, 255, 255));
+        MenuRequisitos1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/grafico.png"))); // NOI18N
+        MenuRequisitos1.setText("GRAFICAR");
+        MenuRequisitos1.setOpaque(true);
+        MenuRequisitos1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MenuRequisitos1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                MenuRequisitos1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                MenuRequisitos1MouseExited(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -162,13 +188,14 @@ public class home extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addComponent(jLabel6)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(MenuRequisitos1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addComponent(MenuLaboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(MenuAdMin, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -176,9 +203,10 @@ public class home extends javax.swing.JFrame {
                 .addComponent(MenuCertificadoDeCalidad, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addComponent(MenuSubir, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addGap(18, 18, 18)
                 .addComponent(MenuRequisitos, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30))
+                .addGap(21, 21, 21)
+                .addComponent(MenuRequisitos1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         content.setBackground(new java.awt.Color(255, 255, 255));
@@ -196,12 +224,12 @@ public class home extends javax.swing.JFrame {
             .addGroup(contentLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
         contentLayout.setVerticalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contentLayout.createSequentialGroup()
-                .addContainerGap(498, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addContainerGap())
         );
@@ -218,9 +246,7 @@ public class home extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, 556, Short.MAX_VALUE)
         );
 
         jMenuBar1.setBackground(new java.awt.Color(255, 255, 255));
@@ -316,7 +342,7 @@ public class home extends javax.swing.JFrame {
     }//GEN-LAST:event_MenuSubirMouseClicked
 
     private void MenuRequisitosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuRequisitosMouseClicked
-        Panel_5 p5 = new Panel_5();
+        Panel_6 p5 = new Panel_6();
         p5.setSize(626, 532);
         p5.setLocation(0,0);
         
@@ -394,6 +420,20 @@ public class home extends javax.swing.JFrame {
         tableAdmin.setVisible(true);
     }//GEN-LAST:event_jMenu2MouseClicked
 
+    private void MenuRequisitos1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuRequisitos1MouseClicked
+
+        Graficas ven_graf = new Graficas(this, true);
+        ven_graf.setVisible(true);
+    }//GEN-LAST:event_MenuRequisitos1MouseClicked
+
+    private void MenuRequisitos1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuRequisitos1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MenuRequisitos1MouseEntered
+
+    private void MenuRequisitos1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuRequisitos1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MenuRequisitos1MouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -435,6 +475,7 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel MenuCertificadoDeCalidad;
     private javax.swing.JLabel MenuLaboratorio;
     private javax.swing.JLabel MenuRequisitos;
+    private javax.swing.JLabel MenuRequisitos1;
     private javax.swing.JLabel MenuSubir;
     private javax.swing.JMenu TablaDeLab;
     private javax.swing.JPanel content;
